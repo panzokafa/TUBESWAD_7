@@ -115,11 +115,11 @@
                             </div>
                         </div>
                         <div class="row mb-0">
-                        <span class="col-md-8 mb-3 text-md-end text-dark">Sudah Punya Akun ? <a href="{{ route('login') }}" class="p-0 text-info">login</a></span>
+                        <span class="col-md-8 mb-3 text-md-end text-dark">Sudah Punya Akun ? <a href="{{ route('login') }}" class="p-0 text-danger">login</a></span>
                         </div>
                         <div class="row mb-0">
                             <div class="col-md-5 offset-md-4">
-                                <button type="submit" class="btn btn-info px-5">
+                                <button type="submit" class="btn btn-danger px-5">
                                     {{ __('Register') }}
                                 </button>
                             </div>

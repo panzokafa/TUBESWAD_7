@@ -11,7 +11,7 @@
                 @if ($profile->photoProfile != null )
                 <img  class="img-profile rounded-circle" src="{{asset('/images/photoProfile/'.$profile->photoProfile)}}" style="max-width: 60px">
                 @else
-                <img class="img-profile rounded-circle" src="{{ asset('template/img/boy.png') }}" style="max-width: 60px">
+                <img class="img-profile rounded-circle" src="{{ asset('template/img/Person.png') }}" style="max-width: 60px">
                 @endif
                 <span class="ml-2 d-none d-lg-inline text-white small">{{Auth::user()->name}}</span>
               </a>

@@ -44,7 +44,7 @@
                         <tr>
                             <th scope="col">No.</th>
                             <th scope="col">Nama Anggota</th>
-                            <th scope="col">NPM</th>
+                            <th scope="col">NIM</th>
                             <th scope="col">Email</th>
                             <th scope="col">Tombol Aksi</th>
                         </tr>

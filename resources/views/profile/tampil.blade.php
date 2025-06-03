@@ -19,7 +19,7 @@
                     <img src="{{ asset('/images/photoProfile/' . $profile->photoProfile) }}"
                         style="width:150px;height:150px;border-radius:100px">
                 @else
-                    <img src="{{ asset('template/img/boy.png') }}" style="width:100px;height:100px;border-radius:50px">
+                    <img src="{{ asset('template/img/Person.png') }}" style="width:100px;height:100px;border-radius:50px">
                 @endif
             </div>
             <div class="col-auto mx-4">
