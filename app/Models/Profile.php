@@ -16,7 +16,7 @@ class Profile extends Model
     'alamat',
     'noTelp',
     'photoProfile',
-    'users_id'
+    
     ];
 
     public function user(){
