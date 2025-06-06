@@ -38,4 +38,4 @@ class Peminjaman extends Model
     {
         return $this->belongsTo(Buku::class, 'buku_id', 'id');
     }
-}
+} 
