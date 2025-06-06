@@ -50,7 +50,7 @@
                                 <p class="card-text m-0">Kategori : </p>
                                 <p class="text-dark">
                                     @foreach ($item->kategori_buku as $kategori )
-                                    {{ $kategori->nama, }},
+                                    {{ $kategori->nama}},
                                     @endforeach
                             </p>
                                 <p class="card-text m-0">Status : {{$item->status  }}</p>

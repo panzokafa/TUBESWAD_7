@@ -102,6 +102,8 @@
                     <h6 class="collapse-header">Pinjam Buku</h6>
                     <a class="collapse-item" href="/peminjaman/create">Pinjam Buku</a>
                     <a class="collapse-item" href="/peminjaman">Pinjaman Saya</a>
+                    <a class="collapse-item" href="/pengembalian">Kembalikan Buku</a>
+
                 </div>
             </div>
         </li>

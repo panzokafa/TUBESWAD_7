@@ -20,7 +20,7 @@ class PengembalianController extends Controller
         $profile = Profile::where('users_id',$iduser)->first();
         $buku = Buku::where('status','dipinjam')->get();
         $user = User::all();
-        $peminjam = Profile::where('users_id','>','1')->get();
+        $peminjam = Profile::where('users_id','>','0')->get();
 
         return view('pengembalian.pengembalian',['profile'=>$profile,'users'=>$user,'buku'=>$buku, 'peminjam'=>$peminjam]);
     }
@@ -33,6 +33,7 @@ class PengembalianController extends Controller
         $count = $pinjaman->count();
 
         if($count == 1){
+            
             try {
                 DB::beginTransaction();
                 //update data tanggal pengembalian

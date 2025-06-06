@@ -54,7 +54,7 @@
                             <tr>
                                 <th scope="row">{{ $key }}</th>
                                 <td>{{ $item->name }}</td>
-                                <td>{{ $item->profile->npm }}</td>
+                                <td>{{ optional($item->profile)->npm ?? 'Belum Ada' }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>
 
