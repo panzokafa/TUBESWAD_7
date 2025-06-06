@@ -70,7 +70,7 @@
                     <label for="prodi" class="text-lg text-dark font-weight-bold">Nomor Telephone</label>
                     <h4>{{ $profile->noTelp }}</h4>
                 </div>
-
+ 
             </div>
         </div>
         <div class="edit d-flex justify-content-end my-4 mx-4">
