@@ -1,5 +1,5 @@
 [phases.setup]
-packages = ["php82", "php82-fpm", "php82-mysql", "composer", "nodejs_18", "nginx"]
+packages = ["php82", "php82-mysql", "composer", "nodejs_18"]
 
 [phases.install]
 cmds = [
