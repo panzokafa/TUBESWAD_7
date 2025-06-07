@@ -1,11 +1,11 @@
 [phases.setup]
 nixPkgs = [
-  "php82",                        # PHP 8.2 (Laravel 8 bisa jalan dengan PHP 8.0 ke atas)
-  "composer",                    # Composer untuk install dependencies
-  "php82Extensions.curl",        # GuzzleHTTP dan paket lain butuh curl
-  "php82Extensions.mbstring",    # Laravel butuh mbstring
-  "php82Extensions.pdo",         # PDO untuk database
-  "php82Extensions.tokenizer",   # Tokenizer PHP
-  "php82Extensions.xml",         # XML extension
-  "php82Extensions.fileinfo"     # Fileinfo untuk upload file, dll
+  "php82"
+  "php82Packages.composer"
+  "php82Packages.curl"
+  "php82Packages.fileinfo"
+  "php82Packages.mbstring"
+  "php82Packages.pdo"
+  "php82Packages.tokenizer"
+  "php82Packages.xml"
 ]
