@@ -1,4 +1,3 @@
-# nixpacks.toml - KONFIGURASI FINAL UNTUK PRODUKSI
 [phases.setup]
 packages = ["php82", "php82-mysql", "composer", "nodejs_18"]
 
@@ -17,7 +16,6 @@ cmds = [
   "npm run prod",
   "php artisan config:cache",
   "php artisan route:cache",
-  "php artisan view:cache"
+  "php artisan view:cache",
+  "echo 'Setting permissions...' && chmod -R 777 storage bootstrap/cache"
 ]
-
-# Perhatikan, file ini TIDAK memiliki bagian [start] sama sekali. Inilah tujuannya.
