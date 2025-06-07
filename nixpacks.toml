@@ -9,6 +9,8 @@ cmds = [
 
 [phases.build]
 cmds = [
+  "cp .env.example .env",
+  "php artisan key:generate",
   "composer install --no-dev --optimize-autoloader",
   "php artisan config:cache",
   "php artisan route:cache",
