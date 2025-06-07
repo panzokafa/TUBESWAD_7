@@ -3,6 +3,7 @@ packages = ["php82", "php82-mysql", "composer", "nodejs_18"]
 
 [phases.install]
 cmds = [
+  "mkdir -p /var/log/nginx && touch /var/log/nginx/error.log && chmod -R 777 /var/log/nginx",
   "composer install --ignore-platform-reqs",
   "npm ci"
 ]
