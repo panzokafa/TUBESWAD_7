@@ -1,10 +1,8 @@
 [phases.setup]
-nixpkgsArchive = "https://github.com/NixOS/nixpkgs/archive/nixos-23.11.tar.gz"
 packages = ["php82", "php82-fpm", "php82-mysql", "composer", "nodejs_18", "nginx"]
 
 [phases.install]
 cmds = [
-  "mkdir -p /var/log/nginx && mkdir -p /var/cache/nginx",
   "composer install --ignore-platform-reqs",
   "npm ci"
 ]
