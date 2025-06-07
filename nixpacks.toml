@@ -1,6 +1,9 @@
-# nixpacks.toml (Versi Uji Coba Minimalis)
+# nixpacks.toml - LANGKAH 1
 [phases.setup]
-packages = ["php82"]
+packages = ["php82", "composer"]
+
+[phases.install]
+cmds = ["composer install --ignore-platform-reqs"]
 
 [start]
-cmd = "echo 'Container is alive and running a simple command.' && sleep 3600"
+cmd = "echo 'Composer install finished, container is alive.' && sleep 3600"
