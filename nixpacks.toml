@@ -1,2 +1,10 @@
 [phases.setup]
-packages = ["php82", "php82-fpm"]
+packages = ["php82", "php82-fpm", "composer"]
+
+[phases.build]
+commands = [
+  "composer install --no-dev --optimize-autoloader"
+]
+
+[phases.start]
+command = "php -S 0.0.0.0:$PORT -t public"
