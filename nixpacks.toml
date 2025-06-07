@@ -1,11 +1,10 @@
-[phases.setup]
 pkgs = [
-  "php82"
-  "php82Packages.composer"
-  "php82Packages.curl"
-  "php82Packages.fileinfo"
-  "php82Packages.mbstring"
-  "php82Packages.pdo"
-  "php82Packages.tokenizer"
-  "php82Packages.xml"
+  "php82",
+  "php82Packages.composer",
+  "php82Packages.curl",
+  "php82Packages.fileinfo",
+  "php82Packages.mbstring",
+  "php82Packages.pdo",
+  "php82Packages.tokenizer",
+  "php82Packages.xml",
 ]
