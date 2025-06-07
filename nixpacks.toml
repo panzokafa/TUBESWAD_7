@@ -1,4 +1,13 @@
-# nixpacks.toml
+providers = ["php"]
 
-[providers]
-php = "8.2"
+[phases.setup]
+packages = ["php82", "php82-fpm"]
+
+[phases.install]
+commands = []
+
+[phases.build]
+commands = []
+
+[start]
+cmd = "php -S 0.0.0.0:8000 -t public"
