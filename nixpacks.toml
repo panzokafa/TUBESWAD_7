@@ -1,9 +1,24 @@
-# nixpacks.toml - LANGKAH 1
+# nixpacks.toml - LANGKAH 2 (Perbaikan untuk `npm`)
 [phases.setup]
-packages = ["php82", "composer"]
+packages = ["php82", "php82-mysql", "composer", "nodejs_18"]
 
 [phases.install]
-cmds = ["composer install --ignore-platform-reqs"]
+cmds = [
+  "mkdir -p /var/log/nginx && touch /var/log/nginx/error.log && chmod -R 777 /var/log/nginx",
+  "composer install --ignore-platform-reqs",
+  "npm install" # Menggunakan npm install agar dev dependencies terinstal
+]
+
+[phases.build]
+cmds = [
+  "cp .env.example .env",
+  "php artisan key:generate",
+  "composer install --no-dev --optimize-autoloader",
+  "npm run prod", # Menjalankan build aset
+  "php artisan config:cache",
+  "php artisan route:cache",
+  "php artisan view:cache"
+]
 
 [start]
-cmd = "echo 'Composer install finished, container is alive.' && sleep 3600"
+cmd = "echo 'Build process finished, container is alive.' && sleep 3600"
