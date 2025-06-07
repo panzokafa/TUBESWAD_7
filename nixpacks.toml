@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = [
+pkgs = [
   "php82"
   "php82Packages.composer"
   "php82Packages.curl"
