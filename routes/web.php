@@ -48,4 +48,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/pengembalian', [PengembalianController::class,'pengembalian']);
 
+    Route::get('/clear-cache', function () {
+        Artisan::call('optimize:clear');
+        return '✅ Laravel cache cleared!';
+    });
+
 });
