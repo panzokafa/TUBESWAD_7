@@ -52,6 +52,6 @@ Route::middleware(['auth'])->group(function () {
         Artisan::call('optimize:clear');
         return '✅ Laravel cache cleared!';
     });
-
 });
+
 
