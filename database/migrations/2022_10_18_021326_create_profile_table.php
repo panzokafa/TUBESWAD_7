@@ -24,6 +24,7 @@ class CreateProfileTable extends Migration
             $table->foreign('users_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
+        
     }
 
     /**
