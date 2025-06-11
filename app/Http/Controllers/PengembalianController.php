@@ -24,7 +24,7 @@ class PengembalianController extends Controller
 
         return view('pengembalian.pengembalian',['profile'=>$profile,'users'=>$user,'buku'=>$buku, 'peminjam'=>$peminjam]);
     }
-
+ 
     public function pengembalian(Request $request ){
 
         $pinjaman = Peminjaman::where('users_id',$request->users_id)->where('buku_id',$request->buku_id)
@@ -33,7 +33,7 @@ class PengembalianController extends Controller
         $count = $pinjaman->count();
 
         if($count == 1){
-            
+               
             try {
                 DB::beginTransaction();
                 //update data tanggal pengembalian
@@ -54,7 +54,7 @@ class PengembalianController extends Controller
             Alert::warning('Gagal', 'Buku yang pinjam salah atau tidak ada');
             return redirect('/pengembalian');
         }
-
+ 
     }
-
+ 
 }
