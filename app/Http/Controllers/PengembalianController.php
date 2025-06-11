@@ -36,7 +36,7 @@ class PengembalianController extends Controller
                
             try {
                 DB::beginTransaction();
-                //update data tanggal pengembalian
+                //update tanggal pengembalian
                 $dataPinjaman->tanggal_pengembalian = Carbon::now()->toDateString();
                 $dataPinjaman->save();
                 //update status buku
@@ -54,7 +54,7 @@ class PengembalianController extends Controller
             Alert::warning('Gagal', 'Buku yang pinjam salah atau tidak ada');
             return redirect('/pengembalian');
         }
- 
+  
     }
  
 }
