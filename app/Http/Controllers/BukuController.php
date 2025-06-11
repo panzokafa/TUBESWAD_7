@@ -202,3 +202,4 @@ class BukuController extends Controller
         return redirect('buku');
     }
 }
+
