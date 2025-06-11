@@ -31,7 +31,7 @@ class PengembalianController extends Controller
         ->where('tanggal_pengembalian',null);
         $dataPinjaman = $pinjaman->first();
         $count = $pinjaman->count();
-
+    
         if($count == 1){
                
             try {
