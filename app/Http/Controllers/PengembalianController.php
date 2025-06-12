@@ -51,7 +51,7 @@ class PengembalianController extends Controller
             }
         }
         else {
-            Alert::warning('Gagal', 'Buku yang dipinjam salah atau tidak ada');
+            Alert::warning('Gagal', 'Terjadi Kesalahan Input');
             return redirect('/pengembalian');
         }
   
