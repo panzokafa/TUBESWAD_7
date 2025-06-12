@@ -26,7 +26,7 @@
                         @forelse ($peminjam as $item)
                                 <option value="{{ $item->id }}">{{ $item->user->name}} ( {{ $item->npm }} )</option>
                             @empty
-                                tidak ada user
+                                Tidak ada user
                             @endforelse
                     </select>
                     <div class="fom-group">
