@@ -34,7 +34,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/anggota/{id}', [AnggotaApiController::class, 'show']);
     Route::put('/anggota/{id}', [AnggotaApiController::class, 'update']);
 
-    Route::delete('/pengembalian/{id}', [PengembalianApiController::class, 'pengembalian']);
+    
+    Route::patch('/pengembalian/{id}', [PengembalianApiController::class, 'pengembalian']);
+    Route::get('/pengembalian/{id}', [PengembalianApiController::class, 'index']);
+
+
     Route::post('/peminjaman', [PeminjamanApiController::class, 'store']);
     Route::get('/peminjaman', [PeminjamanApiController::class, 'index']);
     Route::get('/peminjaman/{id}', [PeminjamanApiController::class, 'show']);
