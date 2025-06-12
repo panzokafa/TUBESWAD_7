@@ -76,8 +76,8 @@
                                         style="text-decoration: none; color:white;">Pinjam Buku</a></button>
                                 </div>
                             @endif
-
-                            <!--Delete Modal -->
+                            
+                                {{-- membuat delete modal untuk kategori buku di form tambah buku --}}
                             <div class="modal fade" id="DeleteModal{{ $item->id }}" tabindex="-1" role="dialog"
                                 aria-labelledby="ModalLabelDelete" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
