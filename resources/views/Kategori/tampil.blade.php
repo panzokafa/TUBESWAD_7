@@ -22,16 +22,17 @@
     <script src="{{ '/template/vendor/datatables/jquery.dataTables.min.js' }}"></script>
     <script src="{{ '/template/vendor/datatables/dataTables.bootstrap4.min.js' }}"></script>
 
-    <!-- Page level custom scripts -->
+
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable(); // ID From dataTable
-            $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+            $('#dataTable').DataTable(); // ID Dari dataTable
+            $('#dataTableHover').DataTable();
         });
     </script>
 @endpush
 
 @section('content')
+{{-- buat tambah kategori untuk admin --}}
     @if (Auth::user()->isAdmin == 1)
         <a href="/kategori/create" class="btn btn-success mb-3">Tambah Kategori</a>
     @endif
@@ -63,7 +64,7 @@
                                         <button class="btn btn-danger"><a data-toggle="modal"
                                                 data-target="#DeleteModal{{ $item->id }}"><i class="fa-solid fa-trash"></i></a></button>
 
-                                        <!--Delete Modal -->
+                                        {{-- membuat modal delete kategori --}}
                                         <div class="modal fade" id="DeleteModal{{ $item->id }}" role="dialog"
                                             aria-labelledby="ModalLabelDelete" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -93,7 +94,7 @@
                                         </div>
             </div>
             @endif
-
+{{-- buat lihat kategori untuk mahasiswa --}}
             @if (Auth::user()->isAdmin == 0)
                 <a href="/kategori/{{ $item->id }}" class="btn-sm btn-info px-3 py-2"
                     style="text-decoration: none;color:white">Detail</a>

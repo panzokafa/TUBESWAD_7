@@ -62,7 +62,7 @@ class AnggotaApiController extends Controller
         if (!$user) {
             return response()->json(['message' => 'Anggota tidak ditemukan'], 404);
         }
-
+ 
         $peminjaman = Peminjaman::where('users_id', $id)->get();
 
         return response()->json([

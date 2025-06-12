@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+{{-- detail nama dan deskripsi kategori --}}
     <div class="card">
         <h3 class="judul m-3 text-dark" style="font-weight:bold;">{{ $kategori->nama }}</h3>
         @if ($kategori->deskripsi != null)
@@ -24,7 +25,7 @@
             <a href="/kategori" class="btn btn-info mx-3 my-3">Kembali</a>
         </div>
     </div>
-
+{{-- membuat list buku yang terkait dengan kategori --}}
     <h4 class="m-3 text-dark" style="font-weight: bold;">Buku Terkait Kategori :</h4>
 
     <div class="card container-fluid mb-3">
@@ -55,6 +56,7 @@
                             </p>
                                 <p class="card-text m-0">Status : {{$item->status  }}</p>
                             </div>
+                            {{-- detail kategori untuk admin --}}
                             @if (Auth::user()->isAdmin == 1)
                                 <div class="button-area">
                                     <button class="btn-sm btn-info px-2"><a href="/buku/{{ $item->id }}"
@@ -65,7 +67,7 @@
                                             data-target="#DeleteModal{{ $item->id }}">Delete</a></button>
                                 </div>
                             @endif
-
+                            {{-- detail kategori untuk mahasiswa --}}
                             @if (Auth::user()->isAdmin == 0)
                                 <div class="button-area">
                                     <button class="btn-sm btn-info px-2"><a href="/buku/{{ $item->id }}"
@@ -74,8 +76,8 @@
                                         style="text-decoration: none; color:white;">Pinjam Buku</a></button>
                                 </div>
                             @endif
-
-                            <!--Delete Modal -->
+                            
+                                {{-- membuat delete modal untuk kategori buku di form tambah buku --}}
                             <div class="modal fade" id="DeleteModal{{ $item->id }}" tabindex="-1" role="dialog"
                                 aria-labelledby="ModalLabelDelete" aria-hidden="true">
                                 <div class="modal-dialog" role="document">

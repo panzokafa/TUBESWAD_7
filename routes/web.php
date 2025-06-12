@@ -31,7 +31,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
-
+    // route untuk kategori buku
     Route::resource('kategori', KategoriController::class);
 
     Route::resource('buku', BukuController::class);

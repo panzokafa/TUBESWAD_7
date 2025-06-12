@@ -14,6 +14,8 @@
 @endsection
 
 @section('content')
+{{-- membuat form edit kategori buku --}}
+
     <div class="card px-4 pt-3 pb-5">
         <form action="/kategori/{{ $kategori->id }}" method="post">
             @csrf

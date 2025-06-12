@@ -17,6 +17,7 @@ class KategoriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // membuat method index untuk kategori buku
     public function index()
     {
         $iduser = Auth::id();
@@ -30,6 +31,7 @@ class KategoriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // membuat method create untuk kategori buku
     public function create()
     {
         $iduser = Auth::id();
@@ -44,6 +46,7 @@ class KategoriController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // membuat method store untuk kategori buku
     public function store(Request $request)
     {
         $request->validate([
@@ -66,6 +69,7 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //membuat method show untuk kategori buku
     public function show($id)
     {
         $iduser = Auth::id();
@@ -81,6 +85,7 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //membuat method edit untuk kategori buku
     public function edit($id)
     {
         $iduser = Auth::id();
@@ -96,6 +101,8 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     //membuat method update untuk kategori buku
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -124,6 +131,7 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //membuat method delete untuk kategori buku
     public function destroy($id)
     {
         $kategori=Kategori::find($id);
