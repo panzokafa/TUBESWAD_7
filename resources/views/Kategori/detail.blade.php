@@ -56,6 +56,7 @@
                             </p>
                                 <p class="card-text m-0">Status : {{$item->status  }}</p>
                             </div>
+                            {{-- detail kategori untuk admin --}}
                             @if (Auth::user()->isAdmin == 1)
                                 <div class="button-area">
                                     <button class="btn-sm btn-info px-2"><a href="/buku/{{ $item->id }}"
