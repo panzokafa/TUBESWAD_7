@@ -49,8 +49,6 @@
                     <a href="/peminjaman" class="btn btn-danger">Kembali</a>
                     <button type="submit" class="btn btn-primary mx-1 px-4">Submit</button>
                 </div>
-
-
             </form>
 
         </div>
