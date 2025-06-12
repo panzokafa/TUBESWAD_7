@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+{{-- detail nama dan deskripsi kategori --}}
     <div class="card">
         <h3 class="judul m-3 text-dark" style="font-weight:bold;">{{ $kategori->nama }}</h3>
         @if ($kategori->deskripsi != null)
