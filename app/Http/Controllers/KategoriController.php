@@ -46,6 +46,7 @@ class KategoriController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // membuat method store untuk kategori buku
     public function store(Request $request)
     {
         $request->validate([
