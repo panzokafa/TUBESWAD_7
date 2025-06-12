@@ -94,7 +94,7 @@
                                         </div>
             </div>
             @endif
-
+{{-- buat lihat kategori untuk mahasiswa --}}
             @if (Auth::user()->isAdmin == 0)
                 <a href="/kategori/{{ $item->id }}" class="btn-sm btn-info px-3 py-2"
                     style="text-decoration: none;color:white">Detail</a>
