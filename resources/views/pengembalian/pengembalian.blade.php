@@ -20,7 +20,7 @@
             <form action="/pengembalian" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="nama" class="text-dark font-weight-bold">Nama Peminjam</label>
+                    <label for="nama" class="text-dark font-weight-bold">Nama peminjam</label>
                     <select name="users_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($peminjam as $item)
@@ -49,8 +49,6 @@
                     <a href="/peminjaman" class="btn btn-danger">Kembali</a>
                     <button type="submit" class="btn btn-primary mx-1 px-4">Submit</button>
                 </div>
-
-
             </form>
 
         </div>

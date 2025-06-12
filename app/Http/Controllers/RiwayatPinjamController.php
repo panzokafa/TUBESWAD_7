@@ -147,5 +147,4 @@ class RiwayatPinjamController extends Controller
     {
         //
     }
-}  
-
+}
