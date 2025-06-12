@@ -25,7 +25,7 @@
             <a href="/kategori" class="btn btn-info mx-3 my-3">Kembali</a>
         </div>
     </div>
-
+{{-- membuat list buku yang terkait dengan kategori --}}
     <h4 class="m-3 text-dark" style="font-weight: bold;">Buku Terkait Kategori :</h4>
 
     <div class="card container-fluid mb-3">
