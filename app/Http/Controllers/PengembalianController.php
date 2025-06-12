@@ -31,7 +31,7 @@ class PengembalianController extends Controller
         ->where('tanggal_pengembalian',null);
         $dataPinjaman = $pinjaman->first();
         $count = $pinjaman->count();
-
+    
         if($count == 1){
                
             try {
@@ -51,7 +51,7 @@ class PengembalianController extends Controller
             }
         }
         else {
-            Alert::warning('Gagal', 'Buku yang pinjam salah atau tidak ada');
+            Alert::warning('Gagal', 'Terjadi Kesalahan Input');
             return redirect('/pengembalian');
         }
   

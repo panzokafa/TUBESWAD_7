@@ -26,31 +26,29 @@
                         @forelse ($peminjam as $item)
                                 <option value="{{ $item->id }}">{{ $item->user->name}} ( {{ $item->npm }} )</option>
                             @empty
-                                tidak ada user
+                                Tidak ada user
                             @endforelse
                     </select>
                     <div class="fom-group">
-                    <label for="buku" class="text-dark font-weight-bold">Buku yang akan dikembalikan</label>
+                    <label for="buku" class="text-dark font-weight-bold">Buku Yang Akan Dikembalikan</label>
                     <select name="buku_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($buku as $item)
                                 <option value="{{ $item->id }}">{{ $item->judul}} ( {{ $item->kode_buku }} ) - {{ $item->status }}</option>
                             @empty
-                                tidak ada buku yang tersedia
+                                Tidak ada buku yang tersedia
                             @endforelse
                     </select>
                 </div>
-
+ 
                 @error('buku_id')
                     <div class="alert alert-danger mt-3">{{ $message }}</div>
                 @enderror
-
+ 
                 <div class="d-flex justify-content-end mt-5">
                     <a href="/peminjaman" class="btn btn-danger">Kembali</a>
                     <button type="submit" class="btn btn-primary mx-1 px-4">Submit</button>
                 </div>
-
-
             </form>
 
         </div>
