@@ -131,6 +131,7 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //membuat method delete untuk kategori buku
     public function destroy($id)
     {
         $kategori=Kategori::find($id);
