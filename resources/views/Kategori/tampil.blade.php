@@ -64,7 +64,7 @@
                                         <button class="btn btn-danger"><a data-toggle="modal"
                                                 data-target="#DeleteModal{{ $item->id }}"><i class="fa-solid fa-trash"></i></a></button>
 
-                                        <!--Delete Modal -->
+                                        {{-- membuat modal delete kategori --}}
                                         <div class="modal fade" id="DeleteModal{{ $item->id }}" role="dialog"
                                             aria-labelledby="ModalLabelDelete" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
