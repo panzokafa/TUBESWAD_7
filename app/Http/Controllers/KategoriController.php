@@ -31,6 +31,7 @@ class KategoriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // membuat method create untuk kategori buku
     public function create()
     {
         $iduser = Auth::id();
