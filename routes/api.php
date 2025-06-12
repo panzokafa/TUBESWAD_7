@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\KategoriApiController;
 use App\Http\Controllers\Api\AuthApiController;
 use App\Http\Controllers\Api\AnggotaApiController;
 use App\Http\Controllers\Api\PengembalianApiController;
+use App\Http\Controllers\Api\PeminjamanApiController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -34,6 +35,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/anggota/{id}', [AnggotaApiController::class, 'update']);
 
     Route::delete('/pengembalian/{id}', [PengembalianApiController::class, 'pengembalian']);
+    Route::post('/peminjaman', [PeminjamanApiController::class, 'store']);
+    Route::get('/peminjaman', [PeminjamanApiController::class, 'index']);
+    Route::get('/peminjaman/{id}', [PeminjamanApiController::class, 'show']);
 });
 
 
