@@ -21,12 +21,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/buku', [BukuApiController::class, 'store']);
     Route::put('/buku/{id}', [BukuApiController::class, 'update']);
     Route::delete('/buku/{id}', [BukuApiController::class, 'destroy']);
-
+    //membuat routes api untuk kategori buku
     Route::apiResource('kategori', KategoriApiController::class);
 
     Route::middleware('isAdmin')->group(function () {
-        Route::get('/anggota', [AnggotaApiController::class, 'index']);      
-        Route::post('/anggota', [AnggotaApiController::class, 'store']);     
+        Route::get('/anggota', [AnggotaApiController::class, 'index']);
+        Route::post('/anggota', [AnggotaApiController::class, 'store']);
         Route::delete('/anggota/{id}', [AnggotaApiController::class, 'destroy']);
     });
 
