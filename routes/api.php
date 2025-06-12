@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\BukuApiController;
 use App\Http\Controllers\Api\KategoriApiController;
 use App\Http\Controllers\Api\AuthApiController;
 use App\Http\Controllers\Api\AnggotaApiController;
-
+use App\Http\Controllers\Api\PengembalianApiController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -32,6 +32,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/anggota/{id}', [AnggotaApiController::class, 'show']);
     Route::put('/anggota/{id}', [AnggotaApiController::class, 'update']);
+
+    Route::delete('/pengembalian/{id}', [PengembalianApiController::class, 'pengembalian']);
 });
 
 
