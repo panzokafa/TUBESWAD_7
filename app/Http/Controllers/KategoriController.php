@@ -101,6 +101,8 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     //membuat method update untuk kategori buku
     public function update(Request $request, $id)
     {
         $request->validate([
