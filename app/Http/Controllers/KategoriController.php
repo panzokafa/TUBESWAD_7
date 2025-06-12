@@ -69,6 +69,7 @@ class KategoriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //membuat method show untuk kategori buku
     public function show($id)
     {
         $iduser = Auth::id();
