@@ -22,16 +22,17 @@
     <script src="{{ '/template/vendor/datatables/jquery.dataTables.min.js' }}"></script>
     <script src="{{ '/template/vendor/datatables/dataTables.bootstrap4.min.js' }}"></script>
 
-    <!-- Page level custom scripts -->
+
     <script>
         $(document).ready(function() {
-            $('#dataTable').DataTable(); // ID From dataTable
-            $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+            $('#dataTable').DataTable(); // ID Dari dataTable
+            $('#dataTableHover').DataTable();
         });
     </script>
 @endpush
 
 @section('content')
+{{-- buat tambah kategori untuk admin --}}
     @if (Auth::user()->isAdmin == 1)
         <a href="/kategori/create" class="btn btn-success mb-3">Tambah Kategori</a>
     @endif
