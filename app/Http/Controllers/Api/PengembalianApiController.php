@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Auth;
 
 class PengembalianApiController extends Controller
 {
-    //
+
     public function index()
     {
-        $iduser = Auth::id(); // Jika menggunakan Sanctum
+        $iduser = Auth::id();
         $profile = Profile::where('users_id', $iduser)->first();
         $buku = Buku::where('status', 'dipinjam')->get();
         $user = User::all();
@@ -49,11 +49,11 @@ class PengembalianApiController extends Controller
             try {
                 DB::beginTransaction();
 
-                // update tanggal pengembalian
+
                 $dataPinjaman->tanggal_pengembalian = Carbon::now()->toDateString();
                 $dataPinjaman->save();
 
-                // update status buku
+
                 $buku = Buku::findOrFail($request->buku_id);
                 $buku->status = 'In Stock';
                 $buku->save();
