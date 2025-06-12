@@ -30,7 +30,7 @@
                             @endforelse
                     </select>
                     <div class="fom-group">
-                    <label for="buku" class="text-dark font-weight-bold">Buku yang akan dikembalikan</label>
+                    <label for="buku" class="text-dark font-weight-bold">Buku Yang akan dikembalikan</label>
                     <select name="buku_id" id="" class="form-control">
                         <option value=""></option>
                         @forelse ($buku as $item)
