@@ -67,7 +67,7 @@
                                             data-target="#DeleteModal{{ $item->id }}">Delete</a></button>
                                 </div>
                             @endif
-
+                            {{-- detail kategori untuk mahasiswa --}}
                             @if (Auth::user()->isAdmin == 0)
                                 <div class="button-area">
                                     <button class="btn-sm btn-info px-2"><a href="/buku/{{ $item->id }}"
