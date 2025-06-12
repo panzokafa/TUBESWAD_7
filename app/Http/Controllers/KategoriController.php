@@ -17,6 +17,7 @@ class KategoriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // membuat method index untuk kategori buku
     public function index()
     {
         $iduser = Auth::id();
