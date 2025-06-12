@@ -36,10 +36,10 @@ class PengembalianController extends Controller
                
             try {
                 DB::beginTransaction();
-                //update tanggal pengembalian
+                
                 $dataPinjaman->tanggal_pengembalian = Carbon::now()->toDateString();
                 $dataPinjaman->save();
-                //update status buku
+                
                 $buku = Buku::findOrFail($request->buku_id);
                 $buku->status = 'In Stock';
                 $buku->save();
