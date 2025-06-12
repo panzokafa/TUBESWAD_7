@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\BukuApiController;
 use App\Http\Controllers\Api\KategoriApiController;
 use App\Http\Controllers\Api\AuthApiController;
+use App\Http\Controllers\Api\AnggotaApiController;
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
