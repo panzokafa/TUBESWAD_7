@@ -22,4 +22,15 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/buku/{id}', [BukuApiController::class, 'destroy']);
 
     Route::apiResource('kategori', KategoriApiController::class);
+
+    Route::middleware('isAdmin')->group(function () {
+        Route::get('/anggota', [AnggotaApiController::class, 'index']);      
+        Route::post('/anggota', [AnggotaApiController::class, 'store']);     
+        Route::delete('/anggota/{id}', [AnggotaApiController::class, 'destroy']);
+    });
+
+    Route::get('/anggota/{id}', [AnggotaApiController::class, 'show']);
+    Route::put('/anggota/{id}', [AnggotaApiController::class, 'update']);
 });
+
+
