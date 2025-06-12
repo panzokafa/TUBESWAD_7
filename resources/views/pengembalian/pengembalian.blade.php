@@ -36,7 +36,7 @@
                         @forelse ($buku as $item)
                                 <option value="{{ $item->id }}">{{ $item->judul}} ( {{ $item->kode_buku }} ) - {{ $item->status }}</option>
                             @empty
-                                tidak ada buku yang tersedia
+                                Tidak ada buku yang tersedia
                             @endforelse
                     </select>
                 </div>
