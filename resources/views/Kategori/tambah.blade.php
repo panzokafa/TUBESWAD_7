@@ -14,6 +14,7 @@
 @endsection
 
 @section('content')
+{{-- membuat form tambah kategori --}}
     <div class="card px-4 pt-3 pb-5">
 
         <form action="/kategori" method="post">
