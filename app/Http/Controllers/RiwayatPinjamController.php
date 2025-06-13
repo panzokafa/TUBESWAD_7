@@ -83,6 +83,7 @@ class RiwayatPinjamController extends Controller
             return redirect('/peminjaman/create');
         }
         else {
+            
             try {
                 DB::beginTransaction();
                 // Proses insert tabel riwayat_pinjam
@@ -100,6 +101,7 @@ class RiwayatPinjamController extends Controller
             } catch (\Throwable $th) {
                 DB::rollback();
             }
+
         }
     }
 
