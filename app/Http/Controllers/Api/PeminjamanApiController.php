@@ -54,6 +54,7 @@ class PeminjamanApiController extends Controller
         $buku->stok += 1;
         $buku->save();
 
-        return response()->json(['message' => 'Buku berhasil dikembalikan.']);
+        return response()->json(['message' => 'Buku berhasil dikembalikan!.']);
     }
+    
 }
